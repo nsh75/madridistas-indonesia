@@ -21,7 +21,7 @@ const products = [
     price: "Rp 599.000",
     category: "Jacket",
     image:
-      "https://images.tokopedia.net/img/cache/700/VqbcmM/2025/4/9/1808d654-4614-4e7e-ab35-6a78ff689b7c.jpg.webp",
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/2d67ef0acecd4352b2571c45c04a3295_faec/Jaket_Anthem_Real_Madrid_adidas_Z.N.E._Biru_KC3739_db01_laydown.jpg",
   },
 ];
 
