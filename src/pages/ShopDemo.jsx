@@ -31,23 +31,23 @@ const ShopDemo = () => {
     ][index],
 
     image: [
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/3d7f7e4f6e064fa8bc5f9aeb1e8b14d8_9366/Jersey_Kandang_Real_Madrid_24-25_Putih_IU5011_01_laydown.jpg",
+      "https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/c/cc4062d0445152a0267247dfd33be7ea472f250749470f5977d977ffb208e782.jpeg",
 
       "https://assets.adidas.com/images/w_600,f_auto,q_auto/2d67ef0acecd4352b2571c45c04a3295_faec/Jaket_Anthem_Real_Madrid_adidas_Z.N.E._Biru_KC3739_db01_laydown.jpg",
 
-      "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1200&auto=format&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5gCWAhrZb0zmynVd3K7ortqKZ8y2v9rJUyw&s",
 
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop",
+      "https://store-champions.com/storage/1563/conversions/01K99V7JVH8ACX8BTYKYMJ3JM7-high_res.jpg",
 
-      "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200&auto=format&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4-fDHJcB_Jea9VPiSsaR0B4Gz6V1Lb7Bdgg&s",
 
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop",
+      "https://www.just-keepers.com/siteimg/extrapicsimages/37305.jpg?v=1764948536",
 
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop",
+      "https://us.shop.realmadrid.com/cdn/shop/files/image_3822697b-32b1-45f4-9684-18270c810c2d.jpg?v=1767815473",
 
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=1200&auto=format&fit=crop",
+      "https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m7cct2l9svit22",
 
-      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop",
+      "https://assets.adidas.com/images/w_1880,f_auto,q_auto/33ad09c739a64ca3a1b6ed64ead6db74_9366/IT5113_21_model.jpg",
 
       "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
     ][index],
