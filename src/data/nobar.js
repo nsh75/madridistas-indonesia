@@ -2,7 +2,7 @@ const nobarData = [
   {
     id: 1,
     title: "Real Madrid vs Barcelona",
-    place: "Sleman",
+    place: "Jogjkarta",
     date: "25 Mei 2026",
     time: "20:00 WIB",
     image:
@@ -11,7 +11,7 @@ const nobarData = [
   {
     id: 2,
     title: "Real Madrid vs Atletico",
-    place: "Gunung Kidul",
+    place: "Ternate",
     date: "1 Juni 2026",
     time: "19:30 WIB",
     image:
