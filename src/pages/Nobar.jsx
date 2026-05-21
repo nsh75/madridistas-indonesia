@@ -29,6 +29,10 @@ const Nobar = () => {
             <option>Jakarta</option>
             <option>Bandung</option>
             <option>Surabaya</option>
+            <option>Jayapura</option>
+            <option>Ternate</option>
+            <option>Jogjakarta</option>
+            <option>Ambon</option>
           </select>
         </form>
 
