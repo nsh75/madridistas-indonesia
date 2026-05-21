@@ -1,32 +1,35 @@
+import { useState } from "react"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Squad from "./pages/Squad"
+import Nobar from "./pages/Nobar"
+import Store from "./pages/Store"
+import ShopDemo from "./pages/ShopDemo"
+
 function App() {
+  const [activePage, setActivePage] = useState("home")
+
+  const renderPage = () => {
+    if (activePage === "home") return <Home setActivePage={setActivePage} />
+    if (activePage === "squad") return <Squad />
+    if (activePage === "nobar") return <Nobar />
+    if (activePage === "store") return <Store />
+    if (activePage === "shop") return <ShopDemo />
+
+    return <Home setActivePage={setActivePage} />
+  }
+
   return (
-    <>
-      <header className="bg-slate-950 text-white py-5 shadow-lg">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-2xl font-bold">Madridista Indonesia</h1>
-        </div>
-      </header>
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
 
-      <main className="min-h-screen bg-slate-100">
-        <section className="max-w-6xl mx-auto px-4 py-20 text-center">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6">
-            Website Komunitas Real Madrid Indonesia
-          </h2>
-
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
-            Project UTS Pemrograman Web berbasis React, Tailwind CSS, dan Axios.
-          </p>
-
-          <button className="bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-blue-800 transition">
-            Mulai Explore
-          </button>
-        </section>
+      <main>
+        {renderPage()}
       </main>
 
-      <footer className="bg-slate-950 text-white text-center py-5">
-        <p>&copy; 2026 Madridista Indonesia</p>
-      </footer>
-    </>
+      <Footer />
+    </div>
   )
 }
 
