@@ -6,7 +6,7 @@ const players = [
     position: "Goalkeeper",
     number: 1,
     country: "Belgia",
-    image: "https://assets.laliga.com/squad/2024/t186/p8664/2048x2225/p8664_t186_2024_1_001_000.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Courtois_2018_%28cropped%29.jpg",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const players = [
     position: "Goalkeeper",
     number: 13,
     country: "Ukraina",
-    image: "https://assets.laliga.com/squad/2024/t186/p224747/2048x2225/p224747_t186_2024_1_001_000.png",
+    image: "https://dynamo.kiev.ua/media/posts/2023/11/09/lunin41.jpg",
   },
 
   // Defender
@@ -24,7 +24,7 @@ const players = [
     position: "Defender",
     number: 2,
     country: "Spanyol",
-    image: "https://assets.laliga.com/squad/2024/t186/p149499/2048x2225/p149499_t186_2024_1_001_000.png",
+    image: "https://cdn-jpr.jawapos.com/images/20/2026/05/20/pemain-real-madrid-dani-carvajal-instagramdanicarvajal2-d5mvK.webp",
   },
   {
     id: 4,
