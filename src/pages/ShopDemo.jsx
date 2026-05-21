@@ -12,7 +12,7 @@ const ShopDemo = () => {
           "https://fakestoreapi.com/products"
         );
 
-        const madridProducts = response.data
+       const madridProducts = response.data
   .slice(0, 10)
   .map((item, index) => ({
     ...item,
@@ -50,6 +50,28 @@ const ShopDemo = () => {
       "https://assets.adidas.com/images/w_1880,f_auto,q_auto/33ad09c739a64ca3a1b6ed64ead6db74_9366/IT5113_21_model.jpg",
 
       "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
+    ][index],
+
+    description: [
+      "Official Real Madrid away jersey with modern adidas design for the 2025 season.",
+
+      "Comfortable training shirt used for daily football practice and workouts.",
+
+      "Premium Real Madrid jacket with sporty style and warm materials.",
+
+      "Exclusive Madridistas hoodie perfect for casual wear and matchday vibes.",
+
+      "Champions League football designed for professional training and matches.",
+
+      "Professional goalkeeper gloves with strong grip and wrist protection.",
+
+      "Stylish Real Madrid backpack with spacious compartments for daily use.",
+
+      "Classic vintage Real Madrid jersey inspired by legendary football moments.",
+
+      "Flexible training pants designed for athletes and football training sessions.",
+
+      "Official Madridistas scarf to support Real Madrid during every match.",
     ][index],
   }));
 
