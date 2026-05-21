@@ -18,7 +18,7 @@ const ShopDemo = () => {
     ...item,
 
     title: [
-      "Real Madrid Home Jersey",
+      "Real Madrid Away Jersey",
       "Madrid Training Shirt",
       "Real Madrid Jacket",
       "Madridistas Hoodie",
@@ -31,9 +31,9 @@ const ShopDemo = () => {
     ][index],
 
     image: [
-      "https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/c/cc4062d0445152a0267247dfd33be7ea472f250749470f5977d977ffb208e782.jpeg",
+      "https://www.planetsports.asia/media/catalog/product/cache/5916ecf3714e9284afcad6b81e33eb02/0/1/01-ADIDAS-AOAJYADI5-ADIJJ4182-Blue.jpg",
 
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/2d67ef0acecd4352b2571c45c04a3295_faec/Jaket_Anthem_Real_Madrid_adidas_Z.N.E._Biru_KC3739_db01_laydown.jpg",
+      "https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/c/cc4062d0445152a0267247dfd33be7ea472f250749470f5977d977ffb208e782.jpeg",
 
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5gCWAhrZb0zmynVd3K7ortqKZ8y2v9rJUyw&s",
 
