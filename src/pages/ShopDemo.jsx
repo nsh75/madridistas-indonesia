@@ -13,22 +13,45 @@ const ShopDemo = () => {
         );
 
         const madridProducts = response.data
-          .slice(0, 10)
-          .map((item, index) => ({
-            ...item,
-            title: [
-              "Real Madrid Home Jersey",
-              "Madrid Training Kit",
-              "Madridistas Scarf",
-              "UCL Edition Jersey",
-              "Real Madrid Hoodie",
-              "Madrid Football",
-              "Goalkeeper Gloves",
-              "Real Madrid Jacket",
-              "Vintage Madrid Jersey",
-              "Champions League Ball",
-            ][index],
-          }));
+  .slice(0, 10)
+  .map((item, index) => ({
+    ...item,
+
+    title: [
+      "Real Madrid Home Jersey",
+      "Madrid Training Shirt",
+      "Real Madrid Jacket",
+      "Madridistas Hoodie",
+      "Champions League Ball",
+      "Goalkeeper Gloves",
+      "Real Madrid Backpack",
+      "Vintage Madrid Jersey",
+      "Training Pants",
+      "Real Madrid Scarf",
+    ][index],
+
+    image: [
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/3d7f7e4f6e064fa8bc5f9aeb1e8b14d8_9366/Jersey_Kandang_Real_Madrid_24-25_Putih_IU5011_01_laydown.jpg",
+
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/2d67ef0acecd4352b2571c45c04a3295_faec/Jaket_Anthem_Real_Madrid_adidas_Z.N.E._Biru_KC3739_db01_laydown.jpg",
+
+      "https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1518604666860-9ed391f76460?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=1200&auto=format&fit=crop",
+
+      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop",
+
+      "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
+    ][index],
+  }));
 
         setProducts(madridProducts);
       } catch (error) {
