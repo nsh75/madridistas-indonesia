@@ -1,4 +1,4 @@
-const nobarData = [
+const Nobar = [
   {
     id: 1,
     title: "Real Madrid vs Barcelona",
@@ -28,4 +28,4 @@ const nobarData = [
   },
 ];
 
-export default nobarData;
+export default Nobar;
