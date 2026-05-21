@@ -5,7 +5,7 @@ const products = [
     price: "Rp 899.000",
     category: "Jersey",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7nhnYMqkkRSucplu5CO_MyVgvhoi0XHBDXA&s,
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7nhnYMqkkRSucplu5CO_MyVgvhoi0XHBDXA&s",
   },
   {
     id: 2,
