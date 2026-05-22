@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-const Cart = () => {
-  const [cart, setCart] = useState([]);
+const Cart = ({ setCartCount }) => {
+  const [successMessage, setSuccessMessage] =
+  useState("");
 
   useEffect(() => {
     const savedCart =
@@ -23,13 +24,32 @@ const Cart = () => {
     );
   };
 
-  const totalPrice = cart.reduce(
-    (total, item) => total + Number(item.price),
-    0
-  );
-
+    const totalPrice = cart.reduce(
+      (total, item) => total + Number(item.price),
+      0
+    );
+    const handleCheckout = () => {
+    localStorage.removeItem("cart");
+  
+    setCart([]);
+  
+    setCartCount(0);
+  
+    setSuccessMessage(
+      "Terima kasih Madridistas 🔥 Pembelian berhasil!"
+    );
+  
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 3000);
+  };
   return (
     <section className="min-h-screen bg-slate-50">
+            {successMessage && (
+        <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-lg">
+          {successMessage}
+        </div>
+      )}
       <div className="mx-auto max-w-6xl px-4 py-12">
 
         <div className="mb-10">
@@ -98,7 +118,10 @@ const Cart = () => {
                     ${totalPrice.toFixed(2)}
                   </p>
 
-                  <button className="mt-4 w-full rounded-xl bg-yellow-400 px-6 py-3 font-bold text-slate-900 transition hover:opacity-90 sm:w-auto">
+                  <button
+                  onClick={handleCheckout}
+                  className="mt-4 w-full rounded-xl bg-yellow-400 px-6 py-3 font-bold text-slate-900 transition hover:opacity-90 sm:w-auto"
+                  >
                     Checkout
                   </button>
                 </div>
