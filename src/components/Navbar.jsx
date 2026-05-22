@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-function Navbar({ activePage, setActivePage }) {
+function Navbar({
+  activePage,
+  setActivePage,
+  cartCount,
+  }) {
   const [isOpen, setIsOpen] = useState(false)
   const menus = [
     { id: "home", label: "Home" },
@@ -41,6 +45,11 @@ function Navbar({ activePage, setActivePage }) {
             </li>
           ))}
         </ul>
+        <div className="hidden md:flex">
+          <button className="rounded-xl bg-yellow-400 px-4 py-2 font-bold text-slate-950">
+            🛒 {cartCount}
+          </button>
+        </div>
 
         <button
   onClick={() => setIsOpen(!isOpen)}
