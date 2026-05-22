@@ -37,17 +37,17 @@ const nobarData = [
     date: "15 Juni 2026",
     time: "20:30 WIB",
     image:
-      "https://img.okezone.com/content/2024/02/26/46/2975685/hasil-real-madrid-vs-sevilla-di-liga-spanyol-2023-2024-los-blancos-menang-tipis-1-0-berkat-gol-luka-modric-q1Q5S4V5vL.jpg",
+      "https://assets.khelnow.com/news/uploads/2026/05/rreal.jpg",
   },
   {
     id: 5,
-    title: "Real Madrid vs Valencia",
+    title: "Real Madrid vs Real Betis",
     place: "Bandung",
     region: "Bandung",
     date: "18 Juni 2026",
     time: "19:00 WIB",
     image:
-      "https://assets.goal.com/images/v3/bltfb59fcf9b917efbd/GettyImages-1244226988.jpg",
+      "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_0,w_1919,h_1079/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01ke2jq2gqcpxgvn6df0.jpg",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const nobarData = [
     date: "21 Juni 2026",
     time: "21:00 WIB",
     image:
-      "https://cdn.antaranews.com/cache/1200x800/2024/05/09/real-madrid-vs-bayern.jpg",
+      "https://cdn.skor.id/uploads/member/images/news/260406221520-270.jpg",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const nobarData = [
     date: "25 Juni 2026",
     time: "20:00 WIB",
     image:
-      "https://akcdn.detik.net.id/community/media/visual/2023/03/16/real-madrid-vs-liverpool.jpeg?w=700&q=90",
+      "https://sportsmintmedia.com/wp-content/uploads/2021/04/Real-Madrid-Vs-Liverpool.jpg",
   },
 ];
 
