@@ -6,7 +6,7 @@ const players = [
     position: "Goalkeeper",
     number: 1,
     country: "Belgia",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Courtois_2018_%28cropped%29.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4vNCyAkjsb9V3p017Hd_Fm3ntW1RlMA9olQ&s",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const players = [
     position: "Goalkeeper",
     number: 13,
     country: "Ukraina",
-    image: "https://dynamo.kiev.ua/media/posts/2023/11/09/lunin41.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK0MtQtrBSxSipKgjAbl8hjaAb_TbD1CmWQw&s",
   },
 
   // Defender
@@ -24,7 +24,7 @@ const players = [
     position: "Defender",
     number: 2,
     country: "Spanyol",
-    image: "https://cdn-jpr.jawapos.com/images/20/2026/05/20/pemain-real-madrid-dani-carvajal-instagramdanicarvajal2-d5mvK.webp",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZh_EhcaqVRa6Zm2uZn1SEpwvxtRqxHitL4g&s",
   },
   {
     id: 4,
