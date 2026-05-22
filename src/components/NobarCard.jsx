@@ -12,7 +12,7 @@ const NobarCard = ({ item }) => {
       </h3>
 
       <p className="mt-2 text-slate-600">
-        📍 {item.place}
+        📍 {item.city}
       </p>
 
       <p className="text-slate-600">
