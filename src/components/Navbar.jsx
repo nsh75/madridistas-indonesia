@@ -52,6 +52,7 @@ function Navbar({
           >
             🛒 {cartCount}
           </button>
+          </div>
 
         <button
   onClick={() => setIsOpen(!isOpen)}
