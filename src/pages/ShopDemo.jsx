@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const ShopDemo = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [notification, setNotification] = useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -97,11 +98,22 @@ const ShopDemo = () => {
     JSON.stringify(existingCart)
   );
 
-  alert(`${product.title} ditambahkan ke cart`);
+  setNotification(
+    `${product.title} berhasil ditambahkan`
+  );
+
+  setTimeout(() => {
+    setNotification("");
+  }, 2000);
 };
 
   return (
     <section className="min-h-screen bg-slate-950">
+      {notification && (
+        <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-lg">
+          {notification}
+        </div>
+      )}
       <div className="mx-auto max-w-6xl px-4 py-12">
         
         <div className="mb-10">
@@ -158,6 +170,7 @@ const ShopDemo = () => {
         )}
       </div>
     </section>
+    
   );
 };
 
