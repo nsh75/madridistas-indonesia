@@ -37,32 +37,35 @@ const Nobar = () => {
           </p>
         </div>
 
-        <form className="mb-10 flex flex-col gap-4 sm:flex-row">
-          <input
-            type="text"
-            placeholder="Cari kota atau pertandingan..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-blue-700"
-          />
+      <form className="mb-10 flex flex-col gap-4 rounded-2xl bg-white p-4 shadow-md md:flex-row md:items-center">
+  
+  <div className="w-full">
+    <input
+      type="text"
+      placeholder="Cari kota atau pertandingan..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-700 focus:bg-white"
+    />
+  </div>
 
-          <select
-            value={selectedCity}
-            onChange={(e) =>
-              setSelectedCity(e.target.value)
-            }
-            className="rounded-xl border border-slate-200 px-4 py-3 outline-none transition focus:border-blue-700"
-          >
-            <option>Semua Kota</option>
-            <option>Jakarta</option>
-            <option>Bandung</option>
-            <option>Surabaya</option>
-            <option>Jayapura</option>
-            <option>Ternate</option>
-            <option>Yogyakarta</option>
-            <option>Ambon</option>
-          </select>
-        </form>
+  <div className="w-full md:w-72">
+    <select
+      value={selectedCity}
+      onChange={(e) => setSelectedCity(e.target.value)}
+      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-blue-700 focus:bg-white"
+    >
+      <option>Semua Kota</option>
+      <option>Jakarta</option>
+      <option>Bandung</option>
+      <option>Surabaya</option>
+      <option>Jayapura</option>
+      <option>Ternate</option>
+      <option>Yogyakarta</option>
+      <option>Ambon</option>
+    </select>
+  </div>
+</form>
 
         {filteredNobar.length > 0 ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
