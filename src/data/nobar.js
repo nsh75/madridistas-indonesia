@@ -9,8 +9,31 @@ const nobarData = [
     image:
       "https://cdn.timesmedia.co.id/images/2021/04/10/Duel-El-Clasico.jpg",
   },
+
   {
     id: 2,
+    title: "Real Madrid vs Barcelona",
+    place: "Jakarta",
+    region: "Jakarta",
+    date: "25 Mei 2026",
+    time: "20:00 WIB",
+    image:
+      "https://cdn.timesmedia.co.id/images/2021/04/10/Duel-El-Clasico.jpg",
+  },
+
+  {
+    id: 3,
+    title: "Real Madrid vs Barcelona",
+    place: "Bandung",
+    region: "Bandung",
+    date: "25 Mei 2026",
+    time: "20:00 WIB",
+    image:
+      "https://cdn.timesmedia.co.id/images/2021/04/10/Duel-El-Clasico.jpg",
+  },
+
+  {
+    id: 4,
     title: "Real Madrid vs Atletico",
     place: "Ternate",
     region: "Ternate",
@@ -19,8 +42,20 @@ const nobarData = [
     image:
       "https://cdn.skor.id/uploads/member/images/news/medium_Laga_Atletico_Madrid_vs_Real_Madrid_971ab13515_1758930603.jpeg",
   },
+
   {
-    id: 3,
+    id: 5,
+    title: "Real Madrid vs Atletico",
+    place: "Ambon",
+    region: "Ambon",
+    date: "1 Juni 2026",
+    time: "19:30 WIB",
+    image:
+      "https://cdn.skor.id/uploads/member/images/news/medium_Laga_Atletico_Madrid_vs_Real_Madrid_971ab13515_1758930603.jpeg",
+  },
+
+  {
+    id: 6,
     title: "Real Madrid vs Man City",
     place: "Surabaya",
     region: "Surabaya",
@@ -29,8 +64,20 @@ const nobarData = [
     image:
       "https://s.yimg.com/ny/api/res/1.2/UIjAa.AmhaK2dn6JCvyOjQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNjtjZj13ZWJw/https://media.zenfs.com/en/playmakerstats_articles_264/529408566be67cf901d20669606216b8",
   },
+
   {
-    id: 4,
+    id: 7,
+    title: "Real Madrid vs Man City",
+    place: "Jayapura",
+    region: "Jayapura",
+    date: "10 Juni 2026",
+    time: "22:00 WIB",
+    image:
+      "https://s.yimg.com/ny/api/res/1.2/UIjAa.AmhaK2dn6JCvyOjQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNjtjZj13ZWJw/https://media.zenfs.com/en/playmakerstats_articles_264/529408566be67cf901d20669606216b8",
+  },
+
+  {
+    id: 8,
     title: "Real Madrid vs Sevilla",
     place: "Jayapura",
     region: "Jayapura",
@@ -39,8 +86,9 @@ const nobarData = [
     image:
       "https://assets.khelnow.com/news/uploads/2026/05/rreal.jpg",
   },
+
   {
-    id: 5,
+    id: 9,
     title: "Real Madrid vs Real Betis",
     place: "Bandung",
     region: "Bandung",
@@ -49,8 +97,9 @@ const nobarData = [
     image:
       "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_0,w_1919,h_1079/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/si/01ke2jq2gqcpxgvn6df0.jpg",
   },
+
   {
-    id: 6,
+    id: 10,
     title: "Real Madrid vs Bayern Munich",
     place: "Jakarta",
     region: "Jakarta",
@@ -59,8 +108,9 @@ const nobarData = [
     image:
       "https://cdn.skor.id/uploads/member/images/news/260406221520-270.jpg",
   },
+
   {
-    id: 7,
+    id: 11,
     title: "Real Madrid vs Liverpool",
     place: "Ambon",
     region: "Ambon",
