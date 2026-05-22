@@ -2,7 +2,7 @@ const nobarData = [
   {
     id: 1,
     title: "Real Madrid vs Barcelona",
-    place: "Yogyakarta",
+    city: "Yogyakarta",
     region: "Yogyakarta",
     date: "25 Mei 2026",
     time: "20:00 WIB",
@@ -13,7 +13,7 @@ const nobarData = [
   {
     id: 2,
     title: "Real Madrid vs Barcelona",
-    place: "Jakarta",
+    city: "Jakarta",
     region: "Jakarta",
     date: "25 Mei 2026",
     time: "20:00 WIB",
@@ -24,7 +24,7 @@ const nobarData = [
   {
     id: 3,
     title: "Real Madrid vs Barcelona",
-    place: "Bandung",
+    city: "Bandung",
     region: "Bandung",
     date: "25 Mei 2026",
     time: "20:00 WIB",
@@ -35,7 +35,7 @@ const nobarData = [
   {
     id: 4,
     title: "Real Madrid vs Atletico",
-    place: "Ternate",
+    city: "Ternate",
     region: "Ternate",
     date: "1 Juni 2026",
     time: "19:30 WIB",
@@ -46,7 +46,7 @@ const nobarData = [
   {
     id: 5,
     title: "Real Madrid vs Atletico",
-    place: "Ambon",
+    city: "Ambon",
     region: "Ambon",
     date: "1 Juni 2026",
     time: "19:30 WIB",
@@ -57,7 +57,7 @@ const nobarData = [
   {
     id: 6,
     title: "Real Madrid vs Man City",
-    place: "Surabaya",
+    city: "Surabaya",
     region: "Surabaya",
     date: "10 Juni 2026",
     time: "22:00 WIB",
@@ -68,7 +68,7 @@ const nobarData = [
   {
     id: 7,
     title: "Real Madrid vs Man City",
-    place: "Jayapura",
+    city: "Jayapura",
     region: "Jayapura",
     date: "10 Juni 2026",
     time: "22:00 WIB",
@@ -79,7 +79,7 @@ const nobarData = [
   {
     id: 8,
     title: "Real Madrid vs Sevilla",
-    place: "Jayapura",
+    city: "Jayapura",
     region: "Jayapura",
     date: "15 Juni 2026",
     time: "20:30 WIB",
@@ -90,7 +90,7 @@ const nobarData = [
   {
     id: 9,
     title: "Real Madrid vs Real Betis",
-    place: "Bandung",
+    city: "Bandung",
     region: "Bandung",
     date: "18 Juni 2026",
     time: "19:00 WIB",
@@ -101,7 +101,7 @@ const nobarData = [
   {
     id: 10,
     title: "Real Madrid vs Bayern Munich",
-    place: "Jakarta",
+    city: "Jakarta",
     region: "Jakarta",
     date: "21 Juni 2026",
     time: "21:00 WIB",
@@ -112,7 +112,7 @@ const nobarData = [
   {
     id: 11,
     title: "Real Madrid vs Liverpool",
-    place: "Ambon",
+    city: "Ambon",
     region: "Ambon",
     date: "25 Juni 2026",
     time: "20:00 WIB",
