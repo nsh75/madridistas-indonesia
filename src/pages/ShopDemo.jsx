@@ -86,6 +86,20 @@ const ShopDemo = () => {
     fetchProducts();
   }, []);
 
+  const addToCart = (product) => {
+  const existingCart =
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+  existingCart.push(product);
+
+  localStorage.setItem(
+    "cart",
+    JSON.stringify(existingCart)
+  );
+
+  alert(`${product.title} ditambahkan ke cart`);
+};
+
   return (
     <section className="min-h-screen bg-slate-950">
       <div className="mx-auto max-w-6xl px-4 py-12">
@@ -131,9 +145,12 @@ const ShopDemo = () => {
                     ${item.price}
                   </p>
 
-                  <button className="rounded-xl bg-yellow-400 px-4 py-2 font-semibold text-slate-900 transition hover:opacity-90">
-                    Buy
-                  </button>
+                  <button
+                    onClick={() => addToCart(item)}
+                    className="w-full rounded-xl bg-yellow-400 px-4 py-2 font-semibold text-slate-900 transition hover:opacity-90"
+                  >
+                  Buy Now
+                </button>
                 </div>
               </div>
             ))}
