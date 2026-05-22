@@ -6,6 +6,7 @@ import Squad from "./pages/Squad"
 import Nobar from "./pages/Nobar"
 import Store from "./pages/Store"
 import ShopDemo from "./pages/ShopDemo"
+import Cart from "./pages/Cart";
 
 function App() {
   const [activePage, setActivePage] = useState("home")
