@@ -142,7 +142,7 @@ const players = [
   position: "Coach",
   number: "-",
   country: "Spanyol",
-  image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1bs00MM-PtLWQRywhp5Na8PDdG7Yv78D5dw&s",
+  image:"https://assets.realmadrid.com/is/image/realmadrid/Arbeloa_550X650-1?$Mobile$&fit=wrap&wid=420",
   },
 ];
 
