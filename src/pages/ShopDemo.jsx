@@ -110,7 +110,7 @@ const ShopDemo = () => {
   return (
     <section className="min-h-screen bg-slate-950">
       {notification && (
-        <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-xl transition-all duration-300"">
+        <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-xl transition-all duration-300">
           {notification}
         </div>
       )}
