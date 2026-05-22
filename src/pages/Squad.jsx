@@ -16,6 +16,7 @@ const filteredPlayers = players.filter((player) => {
 
   return matchSearch && matchPosition;
 });
+  return(
 
     <section className="bg-slate-50 min-h-screen">
       <div className="mx-auto max-w-6xl px-4 py-12">
