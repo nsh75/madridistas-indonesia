@@ -17,6 +17,7 @@ function App() {
     if (activePage === "nobar") return <Nobar />
     if (activePage === "store") return <Store />
     if (activePage === "shop") return <ShopDemo />
+    if (activePage === "cart") return <Cart />
 
     return <Home setActivePage={setActivePage} />
   }
