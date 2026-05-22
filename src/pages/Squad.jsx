@@ -6,18 +6,17 @@ function Squad() {
   const [search, setSearch] = useState("");
   const [position, setPosition] = useState("All");
 
-  const filteredPlayers = players.filter((player) => {
-    const matchName = player.name
-      .toLowerCase()
-      .includes(search.toLowerCase());
+const filteredPlayers = players.filter((player) => {
+  const matchSearch =
+    player.name.toLowerCase().includes(search.toLowerCase()) ||
+    player.number.toString().includes(search);
 
-    const matchPosition =
-      position === "All" || player.position === position;
+  const matchPosition =
+    position === "All" || player.position === position;
 
-    return matchName && matchPosition;
-  });
+  return matchSearch && matchPosition;
+});
 
-  return (
     <section className="bg-slate-50 min-h-screen">
       <div className="mx-auto max-w-6xl px-4 py-12">
         
