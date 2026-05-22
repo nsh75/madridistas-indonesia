@@ -9,15 +9,29 @@ const Nobar = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredNobar = nobarData.filter((item) => {
+  const search = searchTerm
+    .toLowerCase()
+    .trim();
+
+  const place = item.place
+    ?.toLowerCase()
+    .trim();
+
+  const title = item.title
+    ?.toLowerCase()
+    .trim();
+
+  const selected = selectedCity
+    .toLowerCase()
+    .trim();
+
   const matchCity =
     selectedCity === "Semua Kota" ||
-    item.place === selectedCity;
-
-  const search = searchTerm.toLowerCase();
+    place === selected;
 
   const matchSearch =
-    item.title?.toLowerCase().includes(search) ||
-    item.place?.toLowerCase().includes(search);
+    title.includes(search) ||
+    place.includes(search);
 
   return matchCity && matchSearch;
 });
