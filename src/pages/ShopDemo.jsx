@@ -98,6 +98,8 @@ const ShopDemo = ({ setCartCount }) => {
     JSON.stringify(existingCart)
   );
 
+  setCartCount(existingCart.length)
+
   setNotification(
     `${product.title} berhasil ditambahkan`
   );
