@@ -32,7 +32,7 @@ const players = [
     position: "Defender",
     number: 3,
     country: "Brasil",
-    image: "https://assets.laliga.com/squad/2024/t186/p220570/2048x2225/p220570_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9vakMwQF5zhCtdvYjXMBSasbZ1eDNCwnVQ&s",
   },
   {
     id: 5,
@@ -40,7 +40,7 @@ const players = [
     position: "Defender",
     number: 4,
     country: "Austria",
-    image: "https://assets.laliga.com/squad/2024/t186/p59663/2048x2225/p59663_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvunwTQsZCT5YcEsdPO-al0nSZLWonYINIuQ&s",
   },
   {
     id: 6,
@@ -48,7 +48,7 @@ const players = [
     position: "Defender",
     number: 22,
     country: "Jerman",
-    image: "https://assets.laliga.com/squad/2024/t186/p190718/2048x2225/p190718_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGdf6v-lnWML16COI1P6seoFVSlbBHqYrA5w&s",
   },
   {
     id: 7,
@@ -56,7 +56,7 @@ const players = [
     position: "Defender",
     number: 23,
     country: "Prancis",
-    image: "https://assets.laliga.com/squad/2024/t186/p161241/2048x2225/p161241_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVD8E_Cv0-oyuj4lZnOFEjw7HJ3rBbu3xmg&s",
   },
 
   // Midfielder
@@ -66,7 +66,7 @@ const players = [
     position: "Midfielder",
     number: 5,
     country: "Inggris",
-    image: "https://assets.laliga.com/squad/2024/t186/p520554/2048x2225/p520554_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa68IgDBuIrhWeW76NojtcNP9EcHRa2EH_mA&s",
   },
   {
     id: 9,
@@ -74,7 +74,7 @@ const players = [
     position: "Midfielder",
     number: 6,
     country: "Prancis",
-    image: "https://assets.laliga.com/squad/2024/t186/p474184/2048x2225/p474184_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT68xBqFxiJotkCEfnYqTgKJOxLrdt06VsIhg&s",
   },
   {
     id: 10,
@@ -82,7 +82,7 @@ const players = [
     position: "Midfielder",
     number: 8,
     country: "Uruguay",
-    image: "https://assets.laliga.com/squad/2024/t186/p223255/2048x2225/p223255_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnkEVWITjoIyR4vk_0AyzAClUPC-OELs6oVQ&s",
   },
   {
     id: 11,
@@ -90,7 +90,7 @@ const players = [
     position: "Midfielder",
     number: 14,
     country: "Prancis",
-    image: "https://assets.laliga.com/squad/2024/t186/p490541/2048x2225/p490541_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnBOnnE8t9UBqW_mXioCT33yHZ1yT2XaLicA&s",
   },
   {
     id: 12,
@@ -98,7 +98,7 @@ const players = [
     position: "Midfielder",
     number: 15,
     country: "Turki",
-    image: "https://assets.laliga.com/squad/2024/t186/p550287/2048x2225/p550287_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5IQmsmtZRww1peSptMeFJY2JeGR-YTv6hzg&s",
   },
 
   // Forward
@@ -108,7 +108,7 @@ const players = [
     position: "Forward",
     number: 7,
     country: "Brasil",
-    image: "https://assets.laliga.com/squad/2024/t186/p246333/2048x2225/p246333_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnSre650BNqmI4jNrr-N608DezUAuG_wO4Hg&s",
   },
   {
     id: 14,
@@ -116,7 +116,7 @@ const players = [
     position: "Forward",
     number: 9,
     country: "Prancis",
-    image: "https://assets.laliga.com/squad/2024/t186/p219881/2048x2225/p219881_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIp_b3Tbx0DlvNRSvbBA5DKmIF47jmhQ7c-Q&s",
   },
   {
     id: 15,
@@ -124,7 +124,7 @@ const players = [
     position: "Forward",
     number: 11,
     country: "Brasil",
-    image: "https://assets.laliga.com/squad/2024/t186/p412283/2048x2225/p412283_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0R5mN86mMv-gexjbf24wp2L8h9f-8IxPNGw&s",
   },
   {
     id: 16,
@@ -132,17 +132,17 @@ const players = [
     position: "Forward",
     number: 21,
     country: "Maroko",
-    image: "https://assets.laliga.com/squad/2024/t186/p241641/2048x2225/p241641_t186_2024_1_001_000.png",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZWNgY8KMAYfqXHroqqlDePs7ixSIQue3IZg&s",
   },
 
   // Coach
   {
     id: 17,
-    name: "Carlo Ancelotti",
-    position: "Coach",
-    number: "-",
-    country: "Italia",
-    image: "https://img.a.transfermarkt.technology/portrait/big/523.png",
+  name: "Álvaro Arbeloa",
+  position: "Coach",
+  number: "-",
+  country: "Spanyol",
+  image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1bs00MM-PtLWQRywhp5Na8PDdG7Yv78D5dw&s",
   },
 ];
 
