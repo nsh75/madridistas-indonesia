@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function Navbar({ activePage, setActivePage }) {
+  const [isOpen, setIsOpen] = useState(false)
   const menus = [
     { id: "home", label: "Home" },
     { id: "squad", label: "Squad" },
@@ -39,17 +42,37 @@ function Navbar({ activePage, setActivePage }) {
           ))}
         </ul>
 
-        <select
-          value={activePage}
-          onChange={(event) => setActivePage(event.target.value)}
-          className="rounded-xl bg-slate-800 px-3 py-2 text-sm text-white outline-none md:hidden"
+        <button
+  onClick={() => setIsOpen(!isOpen)}
+  className="rounded-xl bg-slate-800 px-3 py-2 text-white md:hidden"
+  >
+    ☰
+  </button>
+
+
+        {isOpen && (
+  <div className="absolute left-0 top-full w-full bg-slate-950 p-4 shadow-lg md:hidden">
+    
+    <div className="flex flex-col gap-3">
+      {menus.map((menu) => (
+        <button
+          key={menu.id}
+          onClick={() => {
+            setActivePage(menu.id)
+            setIsOpen(false)
+          }}
+          className={`rounded-xl px-4 py-3 text-left font-semibold transition ${
+            activePage === menu.id
+              ? "bg-yellow-400 text-slate-950"
+              : "bg-slate-900 text-slate-200 hover:bg-slate-800"
+          }`}
         >
-          {menus.map((menu) => (
-            <option key={menu.id} value={menu.id}>
-              {menu.label}
-            </option>
-          ))}
-        </select>
+          {menu.label}
+        </button>
+      ))}
+    </div>
+  </div>
+)}
       </nav>
     </header>
   )
