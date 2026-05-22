@@ -46,10 +46,12 @@ function Navbar({
           ))}
         </ul>
         <div className="hidden md:flex">
-          <button className="rounded-xl bg-yellow-400 px-4 py-2 font-bold text-slate-950">
+          <button
+            onClick={() => setActivePage("cart")}
+            className="rounded-xl bg-yellow-400 px-4 py-2 font-bold text-slate-950 transition hover:scale-105 hover:opacity-90"
+          >
             🛒 {cartCount}
           </button>
-        </div>
 
         <button
   onClick={() => setIsOpen(!isOpen)}
