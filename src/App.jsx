@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,18 +10,22 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 
 function App() {
-  const [activePage, setActivePage] = useState("home");
-  const [cartCount, setCartCount] = useState(0);
-  const [checkoutProduct, setCheckoutProduct] = useState(null);
+  const [activePage, setActivePage] =
+    useState("home");
 
-  useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartCount(savedCart.length);
-  }, []);
+  const [cartCount, setCartCount] =
+    useState(0);
+
+  const [checkoutProduct, setCheckoutProduct] =
+    useState(null);
 
   const renderPage = () => {
     if (activePage === "home")
-      return <Home setActivePage={setActivePage} />;
+      return (
+        <Home
+          setActivePage={setActivePage}
+        />
+      );
 
     if (activePage === "squad")
       return <Squad />;
@@ -34,10 +38,6 @@ function App() {
         <Store
           setCartCount={setCartCount}
           setActivePage={setActivePage}
-<<<<<<< HEAD
-          setCheckoutProduct={setCheckoutProduct}
-=======
->>>>>>> 07442491c3db95fe0cff4d0b17a81f3cf7a2052e
         />
       );
 
@@ -46,22 +46,34 @@ function App() {
         <ShopDemo
           setCartCount={setCartCount}
           setActivePage={setActivePage}
-          setCheckoutProduct={setCheckoutProduct}
+          setCheckoutProduct={
+            setCheckoutProduct
+          }
         />
       );
 
     if (activePage === "cart")
-      return <Cart setCartCount={setCartCount} />;
+      return (
+        <Cart
+          setCartCount={setCartCount}
+        />
+      );
 
     if (activePage === "checkout")
       return (
         <Checkout
-          checkoutProduct={checkoutProduct}
+          checkoutProduct={
+            checkoutProduct
+          }
           setActivePage={setActivePage}
         />
       );
 
-    return <Home setActivePage={setActivePage} />;
+    return (
+      <Home
+        setActivePage={setActivePage}
+      />
+    );
   };
 
   return (
@@ -72,7 +84,9 @@ function App() {
         cartCount={cartCount}
       />
 
-      <main>{renderPage()}</main>
+      <main>
+        {renderPage()}
+      </main>
 
       <Footer />
     </div>
