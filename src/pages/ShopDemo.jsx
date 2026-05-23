@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const ShopDemo = ({
   setCartCount,
   setActivePage,
+  setCheckoutProduct,
 }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -92,6 +93,10 @@ const ShopDemo = ({
 
   const addToCart = (product) => {
   const handleBuyNow = (product) => {
+  setCheckoutProduct(product);
+
+  setActivePage("checkout");
+  };
   const buyProduct = [product];
 
   localStorage.setItem(
