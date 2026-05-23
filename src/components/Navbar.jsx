@@ -1,10 +1,10 @@
 import { useState } from "react"
-import madridLogo from "../assets/madrid-logo.png"
+import prmiLogo from "../assets/prmi.png"
 import uclLogo from "../assets/ucl-15.png"
 
 function Navbar({ activePage, setActivePage }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  
+
   const menus = [
     { id: "home", label: "Home" },
     { id: "squad", label: "Squad" },
@@ -16,16 +16,15 @@ function Navbar({ activePage, setActivePage }) {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
       <nav className="mx-auto grid max-w-7xl grid-cols-3 items-center px-6 py-4">
-        {/* Logo kiri */}
         <div className="flex items-center gap-4">
           <button
             onClick={() => setActivePage("home")}
             className="flex items-center gap-3"
           >
             <img
-              src={madridLogo}
-              alt="Real Madrid Logo"
-              className="h-12 w-12 object-contain"
+              src={prmiLogo}
+              alt="Madridistas Indonesia Logo"
+              className="h-14 w-14 object-contain"
             />
 
             <span className="h-10 w-px bg-slate-300"></span>
@@ -33,12 +32,11 @@ function Navbar({ activePage, setActivePage }) {
             <img
               src={uclLogo}
               alt="15 UCL Logo"
-              className="h-12 w-auto object-contain"
+              className="h-12 w-12 object-contain"
             />
           </button>
         </div>
 
-        {/* Menu tengah */}
         <ul className="hidden items-center justify-center gap-2 md:flex">
           {menus.map((menu) => (
             <li key={menu.id}>
@@ -56,7 +54,6 @@ function Navbar({ activePage, setActivePage }) {
           ))}
         </ul>
 
-        {/* Login/Register kanan */}
         <div className="hidden items-center justify-end gap-3 md:flex">
           {isLoggedIn ? (
             <>
@@ -90,7 +87,6 @@ function Navbar({ activePage, setActivePage }) {
           )}
         </div>
 
-        {/* Mobile menu */}
         <div className="col-span-2 flex items-center justify-end gap-2 md:hidden">
           <select
             value={activePage}

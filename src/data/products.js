@@ -5,7 +5,7 @@ const products = [
     price: "Rp 899.000",
     category: "Jersey",
     image:
-      "https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7nhnYMqkkRSucplu5CO_MyVgvhoi0XHBDXA&s",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const products = [
     price: "Rp 199.000",
     category: "Accessories",
     image:
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?q=80&w=1200&auto=format&fit=crop",
+      "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const products = [
     price: "Rp 599.000",
     category: "Jacket",
     image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop",
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/2d67ef0acecd4352b2571c45c04a3295_faec/Jaket_Anthem_Real_Madrid_adidas_Z.N.E._Biru_KC3739_db01_laydown.jpg",
   },
 ];
 
