@@ -96,7 +96,7 @@ const ShopDemo = ({
   setCheckoutProduct(product);
 
   setActivePage("checkout");
-  };
+ 
   const buyProduct = [product];
 
   localStorage.setItem(
