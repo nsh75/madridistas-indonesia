@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import products from "../data/products";
 
@@ -5,10 +6,14 @@ const Store = ({
   setCartCount,
   setActivePage,
 }) => {
+  const [notification, setNotification] =
+    useState("");
 
   const addToCart = (product) => {
     const existingCart =
-      JSON.parse(localStorage.getItem("cart")) || [];
+      JSON.parse(
+        localStorage.getItem("cart")
+      ) || [];
 
     existingCart.push(product);
 
@@ -19,7 +24,13 @@ const Store = ({
 
     setCartCount(existingCart.length);
 
-    alert(`${product.name} masuk cart`);
+    setNotification(
+      `${product.name} masuk cart`
+    );
+
+    setTimeout(() => {
+      setNotification("");
+    }, 2000);
   };
 
   const handleBuyNow = (product) => {
@@ -30,23 +41,34 @@ const Store = ({
 
     setCartCount(1);
 
-    setActivePage("cart");
+    setNotification(
+      `${product.name} siap checkout`
+    );
+
+    setTimeout(() => {
+      setNotification("");
+      setActivePage("cart");
+    }, 1000);
   };
 
   return (
     <section className="bg-slate-50 min-h-screen">
 
+      {notification && (
+        <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-xl">
+          {notification}
+        </div>
+      )}
+
       <div className="mx-auto max-w-6xl px-4 py-12">
 
-        <div className="mb-10">
-          <h1 className="text-4xl font-bold text-slate-900">
-            Official Merchandise
-          </h1>
+        <h1 className="mb-3 text-4xl font-bold text-slate-900">
+          Official Merchandise
+        </h1>
 
-          <p className="mt-3 max-w-2xl text-slate-600">
-            Koleksi merchandise resmi Madridistas Indonesia.
-          </p>
-        </div>
+        <p className="mb-8 text-slate-600">
+          Koleksi merchandise resmi Madridistas Indonesia.
+        </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
