@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const ShopDemo = ({ setCartCount }) => {
+const ShopDemo = ({
+  setCartCount,
+  setActivePage,
+}) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [notification, setNotification] = useState("");
@@ -88,6 +91,21 @@ const ShopDemo = ({ setCartCount }) => {
   }, []);
 
   const addToCart = (product) => {
+  const handleBuyNow = (product) => {
+  localStorage.setItem(
+    "cart",
+    JSON.stringify([product])
+  );
+
+  setCartCount(1);
+  setActivePage("cart")
+    
+  window.location.reload();
+
+  setTimeout(() => {
+    window.location.href = "#";
+  }, 100);
+  };
   const existingCart =
     JSON.parse(localStorage.getItem("cart")) || [];
 
