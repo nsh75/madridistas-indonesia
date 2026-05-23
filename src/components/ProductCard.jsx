@@ -1,6 +1,11 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({
+  product,
+  addToCart,
+  handleBuyNow,
+}) => {
   return (
     <div className="rounded-2xl bg-white p-5 shadow-md transition hover:-translate-y-1 hover:shadow-xl">
+
       <img
         src={product.image}
         alt={product.name}
@@ -19,9 +24,25 @@ const ProductCard = ({ product }) => {
         {product.price}
       </p>
 
-      <button className="mt-4 w-full rounded-xl bg-yellow-400 px-4 py-2 font-semibold text-slate-900 transition hover:opacity-90">
-        Buy Now
-      </button>
+      <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+
+        <button
+          onClick={() => addToCart(product)}
+          className="flex-1 rounded-xl bg-slate-900 px-4 py-3 font-bold text-white transition hover:scale-105"
+        >
+          🛒 Cart
+        </button>
+
+        <button
+          onClick={() =>
+            handleBuyNow(product)
+          }
+          className="flex-1 rounded-xl bg-yellow-400 px-4 py-3 font-bold text-slate-900 transition hover:scale-105"
+        >
+          ⚡ Buy
+        </button>
+
+      </div>
     </div>
   );
 };
