@@ -172,18 +172,30 @@ const ShopDemo = ({
                   {item.description}
                 </p>
 
-                <div className="mt-4 flex items-center justify-between">
-                  <p className="font-bold text-blue-700">
-                    ${item.price}
-                  </p>
+               <div className="mt-4 flex flex-col gap-3">
 
-                  <button
-                    onClick={() => addToCart(item)}
-                    className="w-full rounded-xl bg-yellow-400 px-4 py-2 font-semibold text-slate-900 transition hover:opacity-90"
-                  >
-                  Buy Now
-                </button>
-                </div>
+                    <p className="font-bold text-blue-700">
+                      ${item.price}
+                    </p>
+                  
+                    <div className="flex gap-3">
+                  
+                      <button
+                        onClick={() => addToCart(item)}
+                        className="flex-1 rounded-xl bg-slate-900 px-4 py-3 font-bold text-white transition hover:scale-105"
+                      >
+                        🛒 Cart
+                      </button>
+                  
+                      <button
+                        onClick={() => handleBuyNow(item)}
+                        className="flex-1 rounded-xl bg-yellow-400 px-4 py-3 font-bold text-slate-900 transition hover:scale-105"
+                      >
+                        ⚡ Buy
+                      </button>
+                  
+                    </div>
+                  </div>
               </div>
             ))}
           </div>
