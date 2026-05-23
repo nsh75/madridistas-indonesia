@@ -1,5 +1,5 @@
 import { useState } from "react"
-import prmiLogo from "../assets/prmi.png"
+import prmiLogo from "../assets/madrid-logo.png"
 import uclLogo from "../assets/ucl-15.png"
 
 function Navbar({ activePage, setActivePage }) {
