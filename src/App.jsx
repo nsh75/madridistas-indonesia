@@ -34,7 +34,10 @@ function App() {
         <Store
           setCartCount={setCartCount}
           setActivePage={setActivePage}
+<<<<<<< HEAD
           setCheckoutProduct={setCheckoutProduct}
+=======
+>>>>>>> 07442491c3db95fe0cff4d0b17a81f3cf7a2052e
         />
       );
 
