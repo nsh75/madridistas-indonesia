@@ -7,6 +7,7 @@ import Nobar from "./pages/Nobar";
 import Store from "./pages/Store";
 import ShopDemo from "./pages/ShopDemo";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const [activePage, setActivePage] =
@@ -14,6 +15,8 @@ function App() {
 
   const [cartCount, setCartCount] =
     useState(0);
+  const [checkoutProduct, setCheckoutProduct] =
+  useState(null);
 
   const renderPage = () => {
     if (activePage === "home")
@@ -44,6 +47,13 @@ function App() {
       return (
         <Cart
           setCartCount={setCartCount}
+        />
+      );
+    if (activePage === "checkout")
+      return (
+        <Checkout
+          checkoutProduct={checkoutProduct}
+          setActivePage={setActivePage}
         />
       );
 
