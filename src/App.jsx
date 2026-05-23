@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,21 +10,18 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 
 function App() {
-  const [activePage, setActivePage] =
-    useState("home");
+  const [activePage, setActivePage] = useState("home");
+  const [cartCount, setCartCount] = useState(0);
+  const [checkoutProduct, setCheckoutProduct] = useState(null);
 
-  const [cartCount, setCartCount] =
-    useState(0);
-  const [checkoutProduct, setCheckoutProduct] =
-  useState(null);
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartCount(savedCart.length);
+  }, []);
 
   const renderPage = () => {
     if (activePage === "home")
-      return (
-        <Home
-          setActivePage={setActivePage}
-        />
-      );
+      return <Home setActivePage={setActivePage} />;
 
     if (activePage === "squad")
       return <Squad />;
@@ -33,23 +30,26 @@ function App() {
       return <Nobar />;
 
     if (activePage === "store")
-      return <Store />;
+      return (
+        <Store
+          setCartCount={setCartCount}
+          setActivePage={setActivePage}
+          setCheckoutProduct={setCheckoutProduct}
+        />
+      );
 
     if (activePage === "shop")
       return (
-          <ShopDemo
-            setCartCount={setCartCount}
-            setActivePage={setActivePage}
-            setCheckoutProduct={setCheckoutProduct}
-          />
+        <ShopDemo
+          setCartCount={setCartCount}
+          setActivePage={setActivePage}
+          setCheckoutProduct={setCheckoutProduct}
+        />
       );
 
     if (activePage === "cart")
-      return (
-        <Cart
-          setCartCount={setCartCount}
-        />
-      );
+      return <Cart setCartCount={setCartCount} />;
+
     if (activePage === "checkout")
       return (
         <Checkout
@@ -58,25 +58,18 @@ function App() {
         />
       );
 
-    return (
-      <Home
-        setActivePage={setActivePage}
-      />
-    );
+    return <Home setActivePage={setActivePage} />;
   };
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-
       <Navbar
         activePage={activePage}
         setActivePage={setActivePage}
         cartCount={cartCount}
       />
 
-      <main>
-        {renderPage()}
-      </main>
+      <main>{renderPage()}</main>
 
       <Footer />
     </div>

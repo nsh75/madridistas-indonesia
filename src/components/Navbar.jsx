@@ -2,7 +2,7 @@ import { useState } from "react"
 import prmiLogo from "../assets/madrid-logo.png"
 import uclLogo from "../assets/ucl-15.png"
 
-function Navbar({ activePage, setActivePage }) {
+function Navbar({ activePage, setActivePage, cartCount }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   const menus = [
@@ -11,6 +11,7 @@ function Navbar({ activePage, setActivePage }) {
     { id: "nobar", label: "Nobar" },
     { id: "store", label: "Store" },
     { id: "shop", label: "Shop Demo" },
+    { id: "cart", label: "Cart" },
   ]
 
   return (
@@ -49,6 +50,12 @@ function Navbar({ activePage, setActivePage }) {
                 }`}
               >
                 {menu.label}
+
+                {menu.id === "cart" && cartCount > 0 && (
+                  <span className="ml-2 rounded-full bg-yellow-400 px-2 py-0.5 text-xs font-black text-slate-950">
+                    {cartCount}
+                  </span>
+                )}
               </button>
             </li>
           ))}
@@ -95,7 +102,9 @@ function Navbar({ activePage, setActivePage }) {
           >
             {menus.map((menu) => (
               <option key={menu.id} value={menu.id}>
-                {menu.label}
+                {menu.id === "cart" && cartCount > 0
+                  ? `${menu.label} (${cartCount})`
+                  : menu.label}
               </option>
             ))}
           </select>
