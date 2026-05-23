@@ -105,7 +105,9 @@ const Cart = ({ setCartCount }) => {
                   <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 
                     <p className="font-bold text-blue-700">
-                      ${item.price}
+                      {String(item.price).includes("Rp")
+                        ? item.price
+                        : `$${item.price}`}
                     </p>
 
                     <button
