@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
 const Cart = ({ setCartCount }) => {
+  const [cart, setCart] = useState([]);
   const [successMessage, setSuccessMessage] =
-  useState("");
+    useState("");
 
   useEffect(() => {
     const savedCart =
@@ -22,34 +23,41 @@ const Cart = ({ setCartCount }) => {
       "cart",
       JSON.stringify(updatedCart)
     );
+
+    setCartCount(updatedCart.length);
   };
 
-    const totalPrice = cart.reduce(
-      (total, item) => total + Number(item.price),
-      0
-    );
-    const handleCheckout = () => {
+  const handleCheckout = () => {
     localStorage.removeItem("cart");
-  
+
     setCart([]);
-  
+
     setCartCount(0);
-  
+
     setSuccessMessage(
-      "Terima kasih Madridistas 🔥 Pembelian berhasil!"
+      "Terima kasih Madridistas 🔥"
     );
-  
+
     setTimeout(() => {
       setSuccessMessage("");
     }, 3000);
   };
+
+  const totalPrice = cart.reduce(
+    (total, item) =>
+      total + (parseFloat(item.price) || 0),
+    0
+  );
+
   return (
     <section className="min-h-screen bg-slate-50">
-            {successMessage && (
+
+      {successMessage && (
         <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-lg">
           {successMessage}
         </div>
       )}
+
       <div className="mx-auto max-w-6xl px-4 py-12">
 
         <div className="mb-10">
@@ -65,6 +73,7 @@ const Cart = ({ setCartCount }) => {
         {cart.length > 0 ? (
           <>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
               {cart.map((item, index) => (
                 <div
                   key={index}
@@ -85,12 +94,15 @@ const Cart = ({ setCartCount }) => {
                   </p>
 
                   <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
                     <p className="font-bold text-blue-700">
                       ${item.price}
                     </p>
 
                     <button
-                      onClick={() => removeItem(index)}
+                      onClick={() =>
+                        removeItem(index)
+                      }
                       className="rounded-xl bg-red-500 px-4 py-2 font-semibold text-white transition hover:bg-red-600"
                     >
                       Remove
@@ -101,6 +113,7 @@ const Cart = ({ setCartCount }) => {
             </div>
 
             <div className="mt-10 rounded-2xl bg-white p-6 shadow-md">
+
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
                 <div>
@@ -114,13 +127,14 @@ const Cart = ({ setCartCount }) => {
                 </div>
 
                 <div className="text-left sm:text-right">
+
                   <p className="text-3xl font-extrabold text-blue-700">
                     ${totalPrice.toFixed(2)}
                   </p>
 
                   <button
-                  onClick={handleCheckout}
-                  className="mt-4 w-full rounded-xl bg-yellow-400 px-6 py-3 font-bold text-slate-900 transition hover:opacity-90 sm:w-auto"
+                    onClick={handleCheckout}
+                    className="mt-4 w-full rounded-xl bg-yellow-400 px-6 py-3 font-bold text-slate-900 transition hover:opacity-90 sm:w-auto"
                   >
                     Checkout
                   </button>
