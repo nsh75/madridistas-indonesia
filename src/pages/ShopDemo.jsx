@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 const ShopDemo = ({
   setCartCount,
   setActivePage,
-  setCheckoutProduct,
 }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [notification, setNotification] = useState("");
+  const [notification, setNotification] =
+    useState("");
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -17,68 +17,68 @@ const ShopDemo = ({
           "https://fakestoreapi.com/products"
         );
 
-       const madridProducts = response.data
-  .slice(0, 10)
-  .map((item, index) => ({
-    ...item,
+        const madridProducts = response.data
+          .slice(0, 10)
+          .map((item, index) => ({
+            ...item,
 
-    title: [
-      "Real Madrid Away Jersey",
-      "Madrid Training Shirt",
-      "Real Madrid Jacket",
-      "Madridistas Hoodie",
-      "Champions League Ball",
-      "Goalkeeper Gloves",
-      "Real Madrid Backpack",
-      "Vintage Madrid Jersey",
-      "Training Pants",
-      "Real Madrid Scarf",
-    ][index],
+            title: [
+              "Real Madrid Away Jersey",
+              "Madrid Training Shirt",
+              "Real Madrid Jacket",
+              "Madridistas Hoodie",
+              "Champions League Ball",
+              "Goalkeeper Gloves",
+              "Real Madrid Backpack",
+              "Vintage Madrid Jersey",
+              "Training Pants",
+              "Real Madrid Scarf",
+            ][index],
 
-    image: [
-      "https://www.planetsports.asia/media/catalog/product/cache/5916ecf3714e9284afcad6b81e33eb02/0/1/01-ADIDAS-AOAJYADI5-ADIJJ4182-Blue.jpg",
+            image: [
+              "https://www.planetsports.asia/media/catalog/product/cache/5916ecf3714e9284afcad6b81e33eb02/0/1/01-ADIDAS-AOAJYADI5-ADIJJ4182-Blue.jpg",
 
-      "https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/c/cc4062d0445152a0267247dfd33be7ea472f250749470f5977d977ffb208e782.jpeg",
+              "https://www.classicfootballshirts.co.uk/cdn-cgi/image/fit=pad,q=70,f=webp//pub/media/catalog/product//c/c/cc4062d0445152a0267247dfd33be7ea472f250749470f5977d977ffb208e782.jpeg",
 
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5gCWAhrZb0zmynVd3K7ortqKZ8y2v9rJUyw&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5gCWAhrZb0zmynVd3K7ortqKZ8y2v9rJUyw&s",
 
-      "https://store-champions.com/storage/1563/conversions/01K99V7JVH8ACX8BTYKYMJ3JM7-high_res.jpg",
+              "https://store-champions.com/storage/1563/conversions/01K99V7JVH8ACX8BTYKYMJ3JM7-high_res.jpg",
 
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4-fDHJcB_Jea9VPiSsaR0B4Gz6V1Lb7Bdgg&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4-fDHJcB_Jea9VPiSsaR0B4Gz6V1Lb7Bdgg&s",
 
-      "https://www.just-keepers.com/siteimg/extrapicsimages/37305.jpg?v=1764948536",
+              "https://www.just-keepers.com/siteimg/extrapicsimages/37305.jpg?v=1764948536",
 
-      "https://us.shop.realmadrid.com/cdn/shop/files/image_3822697b-32b1-45f4-9684-18270c810c2d.jpg?v=1767815473",
+              "https://us.shop.realmadrid.com/cdn/shop/files/image_3822697b-32b1-45f4-9684-18270c810c2d.jpg?v=1767815473",
 
-      "https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m7cct2l9svit22",
+              "https://down-id.img.susercontent.com/file/id-11134207-7rbk7-m7cct2l9svit22",
 
-      "https://assets.adidas.com/images/w_1880,f_auto,q_auto/33ad09c739a64ca3a1b6ed64ead6db74_9366/IT5113_21_model.jpg",
+              "https://assets.adidas.com/images/w_1880,f_auto,q_auto/33ad09c739a64ca3a1b6ed64ead6db74_9366/IT5113_21_model.jpg",
 
-      "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
-    ][index],
+              "https://i.ebayimg.com/images/g/EdYAAOSwINhj0ALu/s-l1200.jpg",
+            ][index],
 
-    description: [
-      "Official Real Madrid away jersey with modern adidas design for the 2025 season.",
+            description: [
+              "Official Real Madrid away jersey with modern adidas design for the 2025 season.",
 
-      "Comfortable training shirt used for daily football practice and workouts.",
+              "Comfortable training shirt used for daily football practice and workouts.",
 
-      "Premium Real Madrid jacket with sporty style and warm materials.",
+              "Premium Real Madrid jacket with sporty style and warm materials.",
 
-      "Exclusive Madridistas hoodie perfect for casual wear and matchday vibes.",
+              "Exclusive Madridistas hoodie perfect for casual wear and matchday vibes.",
 
-      "Champions League football designed for professional training and matches.",
+              "Champions League football designed for professional training and matches.",
 
-      "Professional goalkeeper gloves with strong grip and wrist protection.",
+              "Professional goalkeeper gloves with strong grip and wrist protection.",
 
-      "Stylish Real Madrid backpack with spacious compartments for daily use.",
+              "Stylish Real Madrid backpack with spacious compartments for daily use.",
 
-      "Classic vintage Real Madrid jersey inspired by legendary football moments.",
+              "Classic vintage Real Madrid jersey inspired by legendary football moments.",
 
-      "Flexible training pants designed for athletes and football training sessions.",
+              "Flexible training pants designed for athletes and football training sessions.",
 
-      "Official Madridistas scarf to support Real Madrid during every match.",
-    ][index],
-  }));
+              "Official Madridistas scarf to support Real Madrid during every match.",
+            ][index],
+          }));
 
         setProducts(madridProducts);
       } catch (error) {
@@ -92,58 +92,57 @@ const ShopDemo = ({
   }, []);
 
   const addToCart = (product) => {
+    const existingCart =
+      JSON.parse(localStorage.getItem("cart")) || [];
+
+    existingCart.push(product);
+
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(existingCart)
+    );
+
+    setCartCount(existingCart.length);
+
+    setNotification(
+      `${product.title} berhasil ditambahkan`
+    );
+
+    setTimeout(() => {
+      setNotification("");
+    }, 2000);
+  };
+
   const handleBuyNow = (product) => {
-  setCheckoutProduct(product);
+    const buyProduct = [product];
 
-  setActivePage("checkout");
- 
-  const buyProduct = [product];
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(buyProduct)
+    );
 
-  localStorage.setItem(
-    "cart",
-    JSON.stringify(buyProduct)
-  );
+    setCartCount(1);
 
-  setCartCount(1);
+    setNotification(
+      `${product.title} siap dibeli`
+    );
 
-  setNotification(
-    `${product.title} siap dibeli`
-  );
-
-  setTimeout(() => {
-    setActivePage("cart");
-  }, 800);
-};
-  const existingCart =
-    JSON.parse(localStorage.getItem("cart")) || [];
-
-  existingCart.push(product);
-
-  localStorage.setItem(
-    "cart",
-    JSON.stringify(existingCart)
-  );
-
-  setCartCount(existingCart.length)
-
-  setNotification(
-    `${product.title} berhasil ditambahkan`
-  );
-
-  setTimeout(() => {
-    setNotification("");
-  }, 2000);
-};
+    setTimeout(() => {
+      setActivePage("cart");
+    }, 800);
+  };
 
   return (
     <section className="min-h-screen bg-slate-950">
+
       {notification && (
         <div className="fixed right-5 top-5 z-50 rounded-xl bg-green-500 px-5 py-3 text-white shadow-xl transition-all duration-300">
           {notification}
         </div>
       )}
+
       <div className="mx-auto max-w-6xl px-4 py-12">
-        
+
         <div className="mb-10">
           <h1 className="text-4xl font-bold text-slate-50">
             Madridistas Store API
@@ -161,6 +160,7 @@ const ShopDemo = ({
           </div>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
             {products.map((item) => (
               <div
                 key={item.id}
@@ -180,37 +180,38 @@ const ShopDemo = ({
                   {item.description}
                 </p>
 
-               <div className="mt-4 flex flex-col gap-3">
+                <div className="mt-4 flex flex-col gap-3">
 
-                    <p className="font-bold text-blue-700">
-                      ${item.price}
-                    </p>
-                  
-                    <div className="flex gap-3">
-                  
-                      <button
-                        onClick={() => addToCart(item)}
-                        className="flex-1 rounded-xl bg-slate-900 px-4 py-3 font-bold text-white transition hover:scale-105"
-                      >
-                        🛒 Cart
-                      </button>
-                  
-                      <button
-                        onClick={() => handleBuyNow(item)}
-                        className="flex-1 rounded-xl bg-yellow-400 px-4 py-3 font-bold text-slate-900 transition hover:scale-105"
-                      >
-                        ⚡ Buy
-                      </button>
-                  
-                    </div>
+                  <p className="font-bold text-blue-700">
+                    ${item.price}
+                  </p>
+
+                  <div className="flex gap-3">
+
+                    <button
+                      onClick={() => addToCart(item)}
+                      className="flex-1 rounded-xl bg-slate-900 px-4 py-3 font-bold text-white transition hover:scale-105"
+                    >
+                      🛒 Cart
+                    </button>
+
+                    <button
+                      onClick={() =>
+                        handleBuyNow(item)
+                      }
+                      className="flex-1 rounded-xl bg-yellow-400 px-4 py-3 font-bold text-slate-900 transition hover:scale-105"
+                    >
+                      ⚡ Buy
+                    </button>
+
                   </div>
+                </div>
               </div>
             ))}
           </div>
         )}
       </div>
     </section>
-    
   );
 };
 
