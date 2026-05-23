@@ -34,9 +34,10 @@ function App() {
 
     if (activePage === "shop")
       return (
-        <ShopDemo
-          setCartCount={setCartCount}
-        />
+          <ShopDemo
+            setCartCount={setCartCount}
+            setActivePage={setActivePage}
+          />
       );
 
     if (activePage === "cart")
