@@ -92,20 +92,23 @@ const ShopDemo = ({
 
   const addToCart = (product) => {
   const handleBuyNow = (product) => {
+  const buyProduct = [product];
+
   localStorage.setItem(
     "cart",
-    JSON.stringify([product])
+    JSON.stringify(buyProduct)
   );
 
   setCartCount(1);
-  setActivePage("cart")
-    
-  window.location.reload();
+
+  setNotification(
+    `${product.title} siap dibeli`
+  );
 
   setTimeout(() => {
-    window.location.href = "#";
-  }, 100);
-  };
+    setActivePage("cart");
+  }, 800);
+};
   const existingCart =
     JSON.parse(localStorage.getItem("cart")) || [];
 
