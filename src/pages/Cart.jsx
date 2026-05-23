@@ -44,10 +44,19 @@ const Cart = ({ setCartCount }) => {
   };
 
   const totalPrice = cart.reduce(
-    (total, item) =>
-      total + (parseFloat(item.price) || 0),
-    0
-  );
+  (total, item) => {
+    const cleanPrice = String(item.price)
+      .replace("Rp", "")
+      .replace(/\./g, "")
+      .replace(",", "")
+      .trim();
+
+        return (
+          total + (parseInt(cleanPrice) || 0)
+        );
+      },
+      0
+    );
 
   return (
     <section className="min-h-screen bg-slate-50">
@@ -129,7 +138,7 @@ const Cart = ({ setCartCount }) => {
                 <div className="text-left sm:text-right">
 
                   <p className="text-3xl font-extrabold text-blue-700">
-                    ${totalPrice.toFixed(2)}
+                    Rp {totalPrice.toLocaleString("id-ID")}
                   </p>
 
                   <button
