@@ -40,6 +40,7 @@ function App() {
           <ShopDemo
             setCartCount={setCartCount}
             setActivePage={setActivePage}
+            setCheckoutProduct={setCheckoutProduct}
           />
       );
 
