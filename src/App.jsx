@@ -33,7 +33,12 @@ function App() {
       return <Nobar />;
 
     if (activePage === "store")
-      return <Store />;
+      return (
+        <Store
+          setCartCount={setCartCount}
+          setActivePage={setActivePage}
+        />
+      );
 
     if (activePage === "shop")
       return (
