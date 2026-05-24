@@ -1,6 +1,9 @@
 import anthemVideo from "../assets/anthem.mp4"
+import nobarData from "../data/nobar"
 
 function Home({ setActivePage }) {
+  const nextNobar = nobarData[0]
+
   const hotNews = [
     {
       id: 1,
@@ -34,30 +37,35 @@ function Home({ setActivePage }) {
     },
   ]
 
+  {/* Card Bawah */}
   const features = [
     {
-      number: "01",
       title: "Squad",
       description: "Lihat daftar pemain Real Madrid berdasarkan posisi.",
       page: "squad",
+      image:
+        "https://images.unsplash.com/photo-1556056504-dc77ff4d11b0?q=80&w=1154&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      number: "02",
       title: "Nobar",
       description: "Temukan jadwal nobar komunitas di berbagai kota.",
       page: "nobar",
+      image:
+        "https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      number: "03",
       title: "Store",
       description: "Lihat merchandise komunitas Madridistas Indonesia.",
       page: "store",
+      image:
+        "https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      number: "04",
       title: "Shop Demo",
       description: "Demo katalog produk dari Public API menggunakan Axios.",
       page: "shop",
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop",
     },
   ]
 
@@ -214,7 +222,7 @@ function Home({ setActivePage }) {
                 </p>
 
                 <h2 className="mt-3 text-3xl font-black leading-tight md:text-5xl">
-                  El Clásico Community Night
+                  {nextNobar.title}
                 </h2>
 
                 <p className="mt-4 max-w-2xl text-blue-100">
@@ -224,13 +232,15 @@ function Home({ setActivePage }) {
 
                 <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
                   <span className="rounded-full bg-white/15 px-4 py-2">
-                    Yogyakarta
+                    {nextNobar.city || nextNobar.place}
                   </span>
+
                   <span className="rounded-full bg-white/15 px-4 py-2">
-                    25 Mei 2026
+                    {nextNobar.date}
                   </span>
+
                   <span className="rounded-full bg-white/15 px-4 py-2">
-                    20:00 WIB
+                    {nextNobar.time}
                   </span>
                 </div>
 
@@ -242,36 +252,44 @@ function Home({ setActivePage }) {
                 </button>
               </div>
 
-              <div className="rounded-[1.5rem] bg-white p-6 text-slate-950 shadow-lg">
-                <p className="text-center text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
-                  Featured Match
-                </p>
+              <div className="overflow-hidden rounded-[1.5rem] bg-white text-slate-950 shadow-lg">
+                <img
+                  src={nextNobar.image}
+                  alt={nextNobar.title}
+                  className="h-56 w-full object-cover"
+                />
 
-                <div className="mt-6 grid grid-cols-[1fr_auto_1fr] items-center gap-4">
-                  <div className="text-center">
-                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-blue-50 text-3xl font-black text-blue-700">
-                      RM
-                    </div>
-                    <h3 className="mt-3 text-lg font-black">Real Madrid</h3>
-                  </div>
-
-                  <div className="rounded-full bg-yellow-400 px-4 py-2 text-sm font-black text-slate-950">
-                    VS
-                  </div>
-
-                  <div className="text-center">
-                    <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-50 text-3xl font-black text-red-600">
-                      FCB
-                    </div>
-                    <h3 className="mt-3 text-lg font-black">Barcelona</h3>
-                  </div>
-                </div>
-
-                <div className="mt-6 rounded-2xl bg-slate-50 p-4 text-center">
-                  <p className="text-sm text-slate-500">Venue</p>
-                  <p className="mt-1 font-bold text-slate-900">
-                    XT Square
+                <div className="p-6">
+                  <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
+                    Featured Match
                   </p>
+
+                  <h3 className="mt-3 text-2xl font-black">
+                    {nextNobar.title}
+                  </h3>
+
+                  <div className="mt-5 rounded-2xl bg-slate-50 p-4">
+                    <p className="text-sm text-slate-500">Venue</p>
+                    <p className="mt-1 font-bold text-slate-900">
+                      {nextNobar.place}
+                    </p>
+                  </div>
+
+                  <div className="mt-4 grid grid-cols-2 gap-3">
+                    <div className="rounded-2xl bg-blue-50 p-4">
+                      <p className="text-sm text-slate-500">Tanggal</p>
+                      <p className="mt-1 font-bold text-blue-700">
+                        {nextNobar.date}
+                      </p>
+                    </div>
+
+                    <div className="rounded-2xl bg-blue-50 p-4">
+                      <p className="text-sm text-slate-500">Waktu</p>
+                      <p className="mt-1 font-bold text-blue-700">
+                        {nextNobar.time}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -302,25 +320,33 @@ function Home({ setActivePage }) {
               <button
                 key={feature.title}
                 onClick={() => setActivePage(feature.page)}
-                className="group rounded-[2rem] border border-blue-100 bg-white p-6 text-left shadow-md transition hover:-translate-y-1 hover:border-blue-700 hover:shadow-xl"
+                className="group overflow-hidden rounded-[2rem] bg-white text-left shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="text-sm font-black text-blue-700">
-                    {feature.number}
-                  </span>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                  />
 
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-700 transition group-hover:bg-blue-700 group-hover:text-white">
-                    →
-                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent"></div>
+
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                    <h3 className="text-2xl font-black text-white">
+                      {feature.title}
+                    </h3>
+
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-blue-700 transition group-hover:bg-blue-700 group-hover:text-white">
+                      →
+                    </span>
+                  </div>
                 </div>
 
-                <h3 className="text-2xl font-black text-slate-950">
-                  {feature.title}
-                </h3>
-
-                <p className="mt-3 leading-relaxed text-slate-600">
-                  {feature.description}
-                </p>
+                <div className="p-5">
+                  <p className="leading-relaxed text-slate-600">
+                    {feature.description}
+                  </p>
+                </div>
               </button>
             ))}
           </div>
